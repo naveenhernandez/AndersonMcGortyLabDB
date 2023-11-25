@@ -1,26 +1,21 @@
-.purple-back{
-    background-color: rgb(59, 107, 204);
-}
-.pink-back{
-    background-color: rgb(255, 255, 255);
-}
+
 
 /* unvisited link */
 a:link {
-    color: rgb(127, 229, 200);
+    color: rgb(0, 0, 0);
   }
   
   /* visited link */
   a:visited {
-    color: rgb(224, 157, 126);
+    color: rgb(140, 0, 255);
   }
   
   /* mouse over link */
   a:hover {
-    color: rgb(220, 105, 255);
+    color: rgb(46, 80, 254);
   }
   
   /* selected link */
   a:active {
-    color: rgb(223, 181, 234);
+    color: rgb(224, 157, 126);
   }
