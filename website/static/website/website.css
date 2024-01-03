@@ -1,3 +1,11 @@
+.navbar-styled {
+  background-color: rgb(22,58,108);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #fff;
+}
 
 .table-container {
   width: 100%;
