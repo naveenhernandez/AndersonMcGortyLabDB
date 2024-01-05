@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link rel="stylesheet" href=" {% static 'website/website.css' %} " type="text/css"/>
-        <title>Materials Database</title>
+        <title>{{ in_depth.identifier }}</title>
         <meta charset="utf-8">
     </head>
     <body>
@@ -36,29 +36,36 @@
             <table class="styled-table">
                 <thead>
                     <tr>
-                        <th>Identifier</th>
-                        <th>Material Name</th>
-                        <th>Acquisition Method</th>
-                        <th>Name</th>
-                        <th>Date Acquired</th>
-                        <th>Last Updated</th>
-                        <th>DOI</th>
+                        <th>{{ in_depth.identifier }}</th>
+                        <th>Related Media</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href='website/templates/website/website_info.html'>
-                            {{ materials.identifier }}
-                        </a></td>
-                        <td>{{ materials.composition }}</td>
-                        <td>{{ materials.method }}</td>
-                        <td>{{ materials.name }}</td>
-                        <td>{{ materials.acquired }}</td>
-                        <td>{{ materials.lastupdate }}</td>
-                        <td>{{ materials.doi }}</td>
+                        <td><b>Composition:</b><br>
+                            {{ in_depth.detailed_comp }}
+                        </td>
+                        <td class="w-25">
+                            <img src="example.jpg" class="img-fluid" alt="example">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Composition:</b><br>
+                            {{ in_depth.acquisition_detail }}
+                        </td>
+                        <td>
+                            <a href="metadata.pdf"><b>Metadata File</b></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Process Notes:</b><br>
+                            {{ in_depth.process_notes }}
+                        </td>
+                        <td>
+                            <a href="protocol.pdf"><b>Additional Resources</b></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </body>
-</html>

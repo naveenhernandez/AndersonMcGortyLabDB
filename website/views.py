@@ -12,6 +12,16 @@ materials = {
     'doi' : 'none'
     }
 
+in_depth = {
+    'identifier' : 'elastic',
+    'detailed_comp' : 'Lorem ipsum dolor sit amet',
+    'image' : 'example.jpg',
+    'acquisition_detail' : 'Lorem ipsum dolor sit amet',
+    'metadata' : 'metadata.pdf',
+    'process_notes' : 'Lorem ipsum dolor sit amet',
+    'additional_resources' : 'protocol.pdf'
+}
+
 def index(request):
     #need database info: "SELECT column, column, column FROM table ORDER BY column"
     # sqlQuery = "SELECT materials1.name, materials1.camera, materials1.date FROM materials1 ORDER BY materials1.name asc" 
@@ -43,13 +53,16 @@ def materialInfo(request, sID):
     # need info on the database and its tables
     # f"SELECT item.info1, item.info2, item.info3 FROM item"
     #this method gives the info for each specific material
-    sqlQuery = "SELECT item.info1, item.info2, item.info3, material.name FROM item "
-    sqlQuery += "INNER JOIN item ON material.id = item.MaterialID WHERE material.id = " + str(sID)
-    with connection.cursor() as cursor:
-        cursor.execute(sqlQuery) 
-        rows = list(cursor.fetchall())
-        cursor.close()
-        connection.close()
+    # sqlQuery = "SELECT item.info1, item.info2, item.info3, material.name FROM item "
+    # sqlQuery += "INNER JOIN item ON material.id = item.MaterialID WHERE material.id = " + str(sID)
+    # with connection.cursor() as cursor:
+    #     cursor.execute(sqlQuery) 
+    #     rows = list(cursor.fetchall())
+    #     cursor.close()
+    #     connection.close()
 
-    return render(request, "website/item.html", {
-    "info":rows})
+    # return render(request, "website/item.html", {
+    # "info":rows})
+    return render(request, "website_info.html", {
+        "in_depth":in_depth
+    })
