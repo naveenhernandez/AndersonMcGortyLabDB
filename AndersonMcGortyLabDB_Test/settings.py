@@ -10,11 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path
-import pymysql
-import os
 from django.core.management.utils import get_random_secret_key
+from pathlib import Path
+import os
 import sys
+import dj_database_url
+
 # import dj_database_url 
 pymysql.install_as_MySQLdb()
 
