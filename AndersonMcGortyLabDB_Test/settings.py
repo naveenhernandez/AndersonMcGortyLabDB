@@ -100,24 +100,12 @@ DATABASES = {
     #EXAMPLE:
     # "default": {
     #     "ENGINE": "django.db.backends.mysql",
-    #     "NAME": "6822_bishops",
+    #     "NAME": "dbname",
     #     "USER": "AdvAppDevStudnt",
-    #     "PASSWORD": "6dn-Ltt@x97UGPZb",
+    #     "PASSWORD": "abcdefg",
     #     "HOST": "mysql5.websitelive.net",
     #     "PORT": "3306"
     # }
-    # "default": {
-    #     "ENGINE": "django.db.backends.sqlite3",
-    #     "NAME": BASE_DIR / "db.sqlite3",
-    # }
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": "Local instance 3306",
-#         "USER": "root@localhost",
-#         "PASSWORD": "AnDrewIsKewl321!!",
-#         "HOST": "localhost",
-#         "PORT": "3306"
-#     }
 # }
 
 # if DEVELOPMENT_MODE is True:
