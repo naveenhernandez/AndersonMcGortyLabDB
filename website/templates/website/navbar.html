@@ -14,10 +14,10 @@
         </li>
       </ul>
       <!-- search bar isn't functional yet -->
-      <form class="d-flex" role="search">
-        <input action = "#" class="form-control me-2" type="search" placeholder="Enter Material Name" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
+        <form class="d-flex" role="search" method="GET" action="/search">
+          <input class="form-control me-2" type="search" placeholder="Enter Material Name" aria-label="Search" name="query">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
     </div>
   </div>
 </nav>
